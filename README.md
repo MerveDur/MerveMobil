@@ -30,13 +30,6 @@ MerveMobil, anlık hava durumunu bulunduğunuz konuma göre ya da istediğiniz b
 
 ## Ekran Görüntüleri
 
-![Ana Ekran](screenshots/screen1.png)
-![Şehir Arama](screenshots/screen2.png)
-
-## Katkı Sağlamak
-
-Katkı yapmak isterseniz, lütfen bir “issue” açın veya “pull request” gönderin.
-
-## Lisans
-
-[MIT](LICENSE)
+![Ana Ekran](images/MerveMobil1.png)
+![Şehir Arama](images/MerveMobil2.png)
+![Sonuç Kartı](images/MerveMobil3.png)
