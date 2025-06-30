@@ -16,6 +16,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        println("once >>>> OPENWEATHER_API_KEY (Gradle): " + project.findProperty("OPENWEATHER_API_KEY"))
+
+        buildConfigField(
+            "String",
+            "OPENWEATHER_API_KEY",
+            "\"${rootProject.findProperty("OPENWEATHER_API_KEY") ?: ""}\""
+        )
+
+
+
     }
 
     buildTypes {
@@ -36,8 +46,14 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+
+    //val apiKey: String = project.findProperty("OPENWEATHER_API_KEY") as String? ?: ""
+
 }
+println(">>>>> build.gradle'da KEY: ${project.properties["OPENWEATHER_API_KEY"]}")
+println(">>>> OPENWEATHER_API_KEY (Gradle): " + project.findProperty("OPENWEATHER_API_KEY"))
 
 dependencies {
 
@@ -74,5 +90,13 @@ dependencies {
 
     // Konum izni
     implementation("com.google.android.gms:play-services-location:21.0.1")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.json:json:20220320")
+
+    implementation("androidx.compose.material:material-icons-extended")
+
+
 
 }
