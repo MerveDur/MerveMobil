@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,4 +57,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Compose BOM (Bill of Materials) — versiyon yönetimi kolaylığı için:
+    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
+
+    // Compose temel kütüphaneleri:
+    implementation("androidx.activity:activity-compose")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+    // (İsteğe bağlı) Preview için:
+    debugImplementation("androidx.compose.ui:ui-tooling")
+
+    // Konum izni
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
 }
